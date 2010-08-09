@@ -1,0 +1,11 @@
+== Install
+
+    gem install authlogic_vkontakte
+
+== Setup
+
+Add "vontakte_authentication" to your User model
+
+    class User < ActiveRecord::Base
+        vkontakte_authentication
+    end
