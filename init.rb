@@ -1,0 +1,1 @@
+require "lib/vkontakte_authentication"
