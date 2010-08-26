@@ -17,3 +17,10 @@ Add "vontakte_authentication" to your User model
     class User < ActiveRecord::Base
         vkontakte_authentication
     end
+
+== Usage
+To add Vkontakte button to your page, simply write this in view:
+    <%= vk_login_button %>
+
+or, in haml
+    = vk_login_button 
