@@ -14,7 +14,7 @@ module VkontakteAuthentication
     end
 
     def vk_login_button
-      content_tag(:div, "", {:id => "vk_login", :onclick => "doLogin();"})
+      content_tag(:div, "", {:id => "vk_login", :onclick => "doLogin(); return false;"})
     end
   end
 end

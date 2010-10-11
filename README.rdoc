@@ -19,6 +19,12 @@ Add "vontakte_authentication" to your User model
     end
 
 == Usage
+To include javascript file in layout:
+    <%= vkontakte_javascript_include_tag %>
+
+Creating "vk_api_transport" 'div' and initializing OpenAPI:
+    <%= vkontakte_init_tag %>
+
 To add Vkontakte button to your page, simply write this in view:
     <%= vk_login_button %>
 
