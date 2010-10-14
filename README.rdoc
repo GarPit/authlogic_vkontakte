@@ -1,6 +1,5 @@
 Bind vkontakte authentication to your authlogic project.
 == Install
-
     gem install authlogic_vkontakte
 
 == Setup
@@ -35,9 +34,9 @@ or, in haml
     = vk_login_button 
 In your controller (UserSession):
     def create
-      <tt>@user_session = UserSession.new(params[:status] ? cookies : params[:user_session])
+      @user_session = UserSession.new(params[:status] ? cookies : params[:user_session])
       if @user_session.save
-        ..</tt>
+        ..
 ...and you're in Vkontakte!
 
 
