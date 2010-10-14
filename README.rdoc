@@ -35,9 +35,9 @@ or, in haml
     = vk_login_button 
 In your controller (UserSession):
     def create
-      @user_session = UserSession.new(params[:status] ? cookies : params[:user_session])
+      <tt>@user_session = UserSession.new(params[:status] ? cookies : params[:user_session])
       if @user_session.save
-        ..
+        ..</tt>
 ...and you're in Vkontakte!
 
 
