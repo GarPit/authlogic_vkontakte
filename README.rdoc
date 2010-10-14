@@ -7,7 +7,7 @@ Run rake task to init resources (javascripts and other)
 
     rake vkontakte:init
 
-Create vkontakte.yml file in your project directory
+Edit vkontakte.yml file in your project directory
 
     vk_app_id: <YOUR_APP_ID>
     vk_app_password: <YOUR_PASSWORD>
