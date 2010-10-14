@@ -1,3 +1,4 @@
+Bind vkontakte authentication to your authlogic project.
 == Install
 
     gem install authlogic_vkontakte
@@ -5,7 +6,7 @@
 == Setup
 Run rake task to init resources (javascripts and other)
 
-    rake vkontakte:javascripts
+    rake vkontakte:init
 
 Create vkontakte.yml file in your project directory
 
@@ -17,6 +18,8 @@ Add "vontakte_authentication" to your User model
     class User < ActiveRecord::Base
         vkontakte_authentication
     end
+And a little requirement now - jQuery (see vkontakte.js) for posting to "create" action of UserSessionController. But
+you can use Ajax.Request if you prefer Prototype. And so, TODO is to create version independent of the javascript framework.
 
 == Usage
 To include javascript file in layout:
@@ -30,3 +33,11 @@ To add Vkontakte button to your page, simply write this in view:
 
 or, in haml
     = vk_login_button 
+In your controller (UserSession):
+    def create
+      @user_session = UserSession.new(params[:status] ? cookies : params[:user_session])
+      if @user_session.save
+        ..
+...and you're in Vkontakte!
+
+
