@@ -4,16 +4,24 @@ Bind vkontakte authentication to your authlogic project.
 
 == Setup
 Run rake task to init resources (javascripts and other)
-
     rake vkontakte:init
 
 Edit vkontakte.yml file in your project directory
-
     vk_app_id: <YOUR_APP_ID>
     vk_app_password: <YOUR_PASSWORD>
 
-Add "vontakte_authentication" to your User model
+Create migration like this one:
+    class AddVkontakteIdToUser < ActiveRecord::Migration
+      def self.up
+        add_column :users, :vk_id, :string
+      end
+    
+      def self.down
+       remove_column :users, :vk_id
+      end
+    end
 
+Add "vontakte_authentication" to your User model
     class User < ActiveRecord::Base
         vkontakte_authentication
     end
