@@ -1,6 +1,6 @@
 Bind vkontakte authentication to your authlogic project.
 == Install
-    gem install authlogic_vkontakte
+    script/plugin install authlogic_vkontakte
 
 == Setup
 Run rake task to init resources (javascripts and other)

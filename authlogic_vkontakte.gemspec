@@ -6,7 +6,7 @@ Gem::Specification.new do |s|
 
   s.required_rubygems_version = Gem::Requirement.new(">= 1.2") if s.respond_to? :required_rubygems_version=
   s.authors = ["Igor Petrov"]
-  s.date = %q{2010-10-11}
+  s.date = %q{2010-10-15}
   s.description = %q{Bind vkontakte authentication to your authlogic project}
   s.email = %q{garik.piton@gmail.com}
   s.extra_rdoc_files = ["README.rdoc", "lib/profile_loader.rb", "lib/settings.rb", "lib/tasks/vkontakte.rake", "lib/vkontakte_authentication.rb", "lib/vkontakte_helper.rb"]
