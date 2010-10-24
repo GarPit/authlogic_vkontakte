@@ -10,7 +10,7 @@ Gem::Specification.new do |s|
   s.description = %q{Bind vkontakte authentication to your authlogic project}
   s.email = %q{garik.piton@gmail.com}
   s.extra_rdoc_files = ["README.rdoc", "lib/profile_loader.rb", "lib/settings.rb", "lib/tasks/vkontakte.rake", "lib/vkontakte_authentication.rb", "lib/vkontakte_helper.rb"]
-  s.files = ["README.rdoc", "Rakefile", "authlogic_vkontakte.gemspec", "init.rb", "js/vkontakte.js", "lib/profile_loader.rb", "lib/settings.rb", "lib/tasks/vkontakte.rake", "lib/vkontakte_authentication.rb", "lib/vkontakte_helper.rb", "Manifest"]
+  s.files = ["README.rdoc", "Rakefile", "authlogic_vkontakte.gemspec", "init.rb", "resources/vkontakte.js", "resources/xd_receiver.html", "lib/profile_loader.rb", "lib/settings.rb", "lib/tasks/vkontakte.rake", "lib/vkontakte_authentication.rb", "lib/vkontakte_helper.rb"]
   s.homepage = %q{http://github.com/GarPit/authlogic_vkontakte}
   s.rdoc_options = ["--line-numbers", "--inline-source", "--title", "Authlogic_vkontakte", "--main", "README.rdoc"]
   s.require_paths = ["lib"]
