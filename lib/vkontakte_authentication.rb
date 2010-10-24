@@ -33,7 +33,7 @@ module VkontakteAuthentication
     def credentials=(value)
       super
       cookies = value.is_a?(Array) ? value.first : value
-      if cookies.is_a?(ActionController::CookieJar) && cookies[vk_app_cookie]
+      if cookies && cookies[vk_app_cookie]
         @vk_cookies = CGI::parse(cookies[vk_app_cookie])        
       end
     end
