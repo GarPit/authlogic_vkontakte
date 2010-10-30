@@ -22,6 +22,8 @@ module VkontakteAuthentication
 
     def vkontakte_authentication
       raise(NotInitializedError, "create and initialize vkontakte.yml") unless profile_loader.vkontakte_yml_defined? && vk_app_id && vk_app_password
+
+      attr_accessible vk_id_field
     end
     
   end
@@ -83,7 +85,6 @@ end
 
 ActiveRecord::Base.class_eval do
   extend VkontakteAuthentication::ClassMethods
-  attr_accessible vk_id_field
 end
 
 Authlogic::Session::Base.class_eval do
