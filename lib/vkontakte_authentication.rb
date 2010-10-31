@@ -22,8 +22,6 @@ module VkontakteAuthentication
 
     def vkontakte_authentication
       raise(NotInitializedError, "create and initialize vkontakte.yml") unless profile_loader.vkontakte_yml_defined? && vk_app_id && vk_app_password
-
-      attr_accessible vk_id_field
     end
     
   end
@@ -51,7 +49,8 @@ module VkontakteAuthentication
         mid_cookie = @vk_cookies['mid'].first
         possible_record = search_for_record(find_by_vk_id_method, mid_cookie)
         if possible_record.nil?
-          possible_record = record_class.new(vk_id_field => mid_cookie)
+          possible_record = record_class.new
+          possible_record.send "#{vk_id_field}=", mid_cookie
           possible_record.send :persistence_token=, Authlogic::Random.hex_token if possible_record.respond_to? :persistence_token=
           possible_record.send :save, false
         end
